@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Clicker+Script&family=Montserrat:wght@300;400;500;800&family=Poppins:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Clicker+Script&family=Montserrat:wght@300;400;500;800&family=Playfair+Display:wght@400;500;600&family=Poppins:wght@300;400;500;600&display=swap');
+
+
+nav{
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #603809;
+    position: fixed;
+
+    >ul{
+        display: flex;
+        align-items: center;
+
+        >li{
+            list-style: none;
+            padding: 0 20px;
+
+            >a{
+                font-size: 14;
+                text-decoration: none;
+                color: white;
+                font-family: 'Playfair Display',sans-serif;
+            }
+            >a:hover,a.active{
+                color: #F9C06A;
+            }
+            >a.active::after,
+            a:hover::after{
+                color: #F9C06A;
+            }
+        }
+    }
+}
+
+.logo{
+    font-size: 35px;
+    font-weight: 400;
+    text-decoration: none;
+    font-family: 'Clicker Script';
+    color: white;
+    margin-left: 20px;
+}
+
+.login{
+    margin-right: 20px;
+
+    >a{
+        font-size: 14;
+        font-family: 'Playfair Display';
+        padding: 0 42px;
+        text-decoration: none;
+        color: white;
+    }
+    >a:hover{
+        color: #F9C06A;
+    }
+
+    >button{
+        color: #1E1E1E;
+        font-size: 16;
+        font-family: 'Playfair Display';
+        font-weight: 600;
+        padding: 12px 25px;
+        border-radius: 24px;
+        background: #F9C06A;
+        border: none;
+        box-shadow: 0px 6px 12px rgba(249, 192, 106, 0.22);
+    }
+    >button:hover{
+        opacity: 0.8;
+        cursor: pointer;
+    }
+}
+
+.mobile{
+    
+    display: none;
+}
+
+.mobile i{
+    font-size: 30px;
+    color: white;
+    margin-right: 20px;
+}
+
+@media screen and (max-width:780px) {
+    #navbar{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-start;
+    position: fixed;
+    top: 55px;
+    right: -300px;
+    width: 150px;
+    height: 32vh;
+    background: #603809;
+    box-shadow: 0 40px 60px rgba(0, 0, 0, 0.1);
+    padding: 40px 0 0 10px;
+    border-bottom-left-radius: 170px;
+    transition: 0.3s ease-in-out;
+
+    >li{
+        padding: 2px 20px;
+    }
+    }
+
+    #navbar.active {
+        right: 0px;
+      }
+    
+
+    .mobile{
+        display:block
+    }
+    .login{
+        display:none
+    }
+}
